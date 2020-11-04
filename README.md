@@ -12,31 +12,19 @@ If you lose your invitation, go to the following link while logged in to GitHub:
 
 Note that invitations expire after 7 days.
 
-Your instructor will make this repo private once you have all been added. 
-
-Fork the repo (after it's Private). Your instructor will let you know when to fork.
-
-Clone your fork down to your machine: `git clone repo-url.git`
-
-Add a remote that points to the original cohort repo (the one you just forked): `git add remote upstream http://github.com/learn-co-students/original-repo-name.git`
+Your instructor will make this repo private once you have all been added.
 
 ### Instructions for Every Challenge
 
-Before **every challenge**, pull the changes from the upstream repo into your master/main branch (Your instructor will tell you when):
+Before **every challenge**, clone down this repo using the `git clone` command and the Clone HTTPS link. This is important - we need you to have a clean repo to work from. _Do not use your old clones of this repo!_
 
-1. `git checkout master` or `git checkout main`
-2. `git pull upstream master` or `git pull upstream main`
+`cd` into the directory of your current code challenge.
 
-Next, create and checkout a new branch. This is where you'll do your work:
-1. `git checkout -b phase-1-round-1` (Or whatever name your instructor provides)
-2. `cd directory-name` into the directory containing the code challenge. 
+Create and checkout a new branch using your first and last name: `git checkout -b bartelby-cumberbuttons`
 
-Work on the challenge and commit and push as you go along:
-1. `git add -A` or `git add .` (to add your saved changes to staging)
-2. `git commit -m "Meaningful commit message"`
-3. `git push origin branch-name`, e.g. `git push origin phase-1-round-1`
+Push your branch: `git push origin bartelby-cumberbuttons`
 
-_!!Please do not push to upstream!!_
+Your instructor will confirm that your branch was pushed successfully. Once all branches appear, your instructor will ask you to start work on the challenge.
 
 At the end of the challenge, make your final commit and push your branch! Await your grade brave almighty student!
 
@@ -45,7 +33,7 @@ At the end of the challenge, make your final commit and push your branch! Await 
 
 ### Before the First Challenge
 
-Please check that all students are listed as collaborators. They should have accepted their invitations also.
+Please check that all students are listed as collaborators with Write access. They should have accepted their invitations also.
 
 If any student does not appear and was not automatically added, please add them.
 
@@ -53,13 +41,21 @@ If any student does not appear and was not automatically added, please add them.
 
 Please add the appropriate code challenge to this repo in its own directory. Ensure the .git folder is not in the code challenge folder. If you wish, you can remove previous code challenges from this repo.
 
-Ask students to pull the repo's changes into their local master/main when ready, and then branch.
+If you changed collaborator access to Read only, please update to Write.
+
+Also ensure that the only branch available is main/master. There should be no additional branches before a code challenge.
+
+Ask students to clone down the repo when ready and push a branch with their name using an empty or pointless commit. Once all branches appear, start the challenge.
 
 ### After every challenge
 
-Go through the forks and grade.
+Pull down the repo and grade.
+
+Clean up/delete all branches except main/master.
 
 Put your grades in Canvas.
+
+Change collaborator access if you wish (optional).
 
 If you wish, remove the code challenge from the repo. If you keep old challenges in, please name the directories simply, e.g. "Phase-1-Code-Challenge-NameOfChallenge".
 
