@@ -1,0 +1,40 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Mr. Cute",
+      "image": "https://thumbs.gfycat.com/EquatorialIckyCat-max-1mb.gif",
+      "calories": 0
+    },
+    {
+      "id": 2,
+      "name": "Mr. Monkey",
+      "image": "https://thumbs.gfycat.com/FatalInnocentAmericanshorthair-max-1mb.gif",
+      "calories": 0
+    },
+    {
+      "id": 3,
+      "name": "Miss. Zebra",
+      "image": "https://media2.giphy.com/media/20G9uNqE3K4dRjCppA/source.gif",
+      "calories": 0
+    },
+    {
+      "id": 4,
+      "name": "Master Lion",
+      "image": "http://bestanimations.com/Animals/Mammals/Cats/Lions/animated-lion-gif-11.gif",
+      "calories": 0
+    },
+    {
+      "id": 5,
+      "name": "Mr. Panda",
+      "image": "https://media.giphy.com/media/ALalVMOVR8Qw/giphy.gif",
+      "calories": 0
+    },
+    {
+      "id": 6,
+      "name": "Mrs. Monkey",
+      "image": "https://cdn.dribbble.com/users/1832502/screenshots/4387756/monkeyanim.gif",
+      "calories": 0
+    }
+  ]
+}
