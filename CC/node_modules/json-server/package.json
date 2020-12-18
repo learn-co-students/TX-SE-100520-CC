@@ -1,0 +1,102 @@
+{
+  "name": "json-server",
+  "version": "0.12.2",
+  "description": "Serves JSON files through REST routes.",
+  "main": "./lib/server/index.js",
+  "bin": "./bin/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "chalk": "^2.3.0",
+    "compression": "^1.7.1",
+    "connect-pause": "^0.1.0",
+    "cors": "^2.8.4",
+    "errorhandler": "^1.2.0",
+    "express": "^4.16.2",
+    "express-urlrewrite": "^1.2.0",
+    "json-parse-helpfulerror": "^1.0.3",
+    "lodash": "^4.11.2",
+    "lodash-id": "^0.14.0",
+    "lowdb": "^0.15.0",
+    "method-override": "^2.3.10",
+    "morgan": "^1.9.0",
+    "nanoid": "^1.0.1",
+    "object-assign": "^4.0.1",
+    "please-upgrade-node": "^3.0.2",
+    "pluralize": "^7.0.0",
+    "request": "^2.83.0",
+    "server-destroy": "^1.0.1",
+    "update-notifier": "^2.3.0",
+    "yargs": "^10.0.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "crlf": "^1.1.1",
+    "cross-env": "^5.1.1",
+    "eslint": "^4.10.0",
+    "eslint-config-prettier": "^2.7.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.3",
+    "markdown-toc": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "mocha": "^4.0.1",
+    "os-tmpdir": "^1.0.1",
+    "pkg-ok": "^1.0.1",
+    "prettier": "^1.7.4",
+    "rimraf": "^2.6.2",
+    "server-ready": "^0.3.1",
+    "standard": "^10.0.3",
+    "supertest": "^3.0.0",
+    "temp-write": "^3.3.0"
+  },
+  "scripts": {
+    "test": "npm run test:cli && npm run test:server && eslint .",
+    "test:cli": "npm run build && cross-env NODE_ENV=test mocha test/cli/*.js",
+    "test:server": "cross-env NODE_ENV=test mocha test/server/*.js",
+    "start": "babel-node src/cli/bin",
+    "fix": "eslint . --fix",
+    "build": "babel src -d lib --copy-files",
+    "toc": "markdown-toc -i README.md",
+    "lf": "crlf --set=LF ./bin/index.js",
+    "prepublishOnly": "npm run build && npm run lf && pkg-ok",
+    "precommit": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/typicode/json-server.git"
+  },
+  "keywords": [
+    "JSON",
+    "server",
+    "fake",
+    "REST",
+    "API",
+    "prototyping",
+    "mock",
+    "mocking",
+    "test",
+    "testing",
+    "rest",
+    "data",
+    "dummy",
+    "sandbox"
+  ],
+  "author": "Typicode <typicode@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/typicode/json-server/issues"
+  },
+  "homepage": "https://github.com/typicode/json-server",
+  "engines": {
+    "node": ">=4"
+  }
+}
