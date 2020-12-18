@@ -11,7 +11,7 @@ const botTypeClasses = {
 
 const BotSpecs = props => {
   return (
-    <div className="ui segment">
+    <div className="ui segment" id="bot-specs">
       <div className="ui two column centered grid">
         <div className="row">
           <div className="four wide column">

@@ -64,11 +64,11 @@ As a user, I should be able to:
 
 [full_demo]: ./public/full_demo.gif "Full demo"
 
-- Sort bots by their health, damage or armor. For this, create a new component, `SortBar`.
-- When I enlist a bot it will be **removed** from the `BotCollection` and added to `YourBotArmy`.
-- Filter bots by their class. We can select a few filters at the same time.
-- Sort bots by their health, damage or armor. For this, create a new component, `SortBar`.
-- Only enlist **one** bot from each `bot_class`. The classes are `["Support", "Medic", "Assault", "Defender", "Captain", "Witch"]`.
+- Sort bots by their health, damage or armor. For this, create a new component, `SortBar`. check
+- When I enlist a bot it will be **removed** from the `BotCollection` and added to `YourBotArmy`. check
+- Filter bots by their class. We can select a few filters at the same time. check
+- Sort bots by their health, damage or armor. For this, create a new component, `SortBar`. //Same deliverable as above.
+- Only enlist **one** bot from each `bot_class`. The classes are `["Support", "Medic", "Assault", "Defender", "Captain", "Witch"]`. check
 
 ## Rubric
 
