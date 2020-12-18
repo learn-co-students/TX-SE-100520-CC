@@ -28,6 +28,7 @@ class BotsPage extends Component {
   }
 
   addBotToMyBots = (bot) => {
+    // Can only add one bot of each class as per the last advanced deliverable, but in order to see the error message you need to open the console log.
     if (this.state.myBots.find(setBot => setBot.bot_class === bot.bot_class)){
       console.log("Cannot add more than one bot of each class")
     } else {
@@ -38,7 +39,6 @@ class BotsPage extends Component {
         allBots: newAllBots
       })
     }
-
   }
 
   removeBotFromMyBots = (bot) => {
@@ -50,7 +50,8 @@ class BotsPage extends Component {
     })
   }
 
-  removeBotFromAllBots = (bot) => {
+  deleteBot = (bot) => {
+    // Warning, this is for real, there is no convenient way to add a bot back ot the db after deleting them.
     let newMyBots = this.state.myBots.filter(setBot => setBot.id !== bot.id)
     let newAllBots = this.state.allBots.filter(setBot => setBot.id !== bot.id)
     this.setState({
@@ -64,8 +65,6 @@ class BotsPage extends Component {
         "Content-Type": "application/json"
       }
     })
-    // .then(res => res.json())
-    // .then(data => console.log(data))
   }
 
   // viewBotSpecs = (bot) => {
@@ -82,27 +81,30 @@ class BotsPage extends Component {
 
   changeBotFilter = (filter) => {
     // The way to apply multpile filters at the same time would be to change preFilter bots in the line below this into "allBots", but no bot has more than one class
-    let newAllBots = this.state.preFilterBots.filter(setBot => setBot.bot_class === filter)
-    this.setState({
-      ...this.state,
-      allBots: newAllBots,
-      botFilter: filter
-    })
-  }
-
-  secondaryBotFilter = (filter) => {
-    let newAllBots = this.state.preFilterBots.filter(setBot => setBot.bot_class === filter)
-    this.setState({
-      ...this.state,
-      allBots: [...newAllBots, ...this.state.allBots],
-      botFilter: filter
-    })
+    // so the way I handled sorting by multiple classes is the user has to select the new classes with the same interface as the first, and the new bots appear in front of the bots selected previously,
+    // but the bots selected previously are still on the page. Another thing to note, the drop down menu selected class stops being accureate after selecting the second class, but that
+    // is in no way affecting the performance.
+    if (this.state.allBots.length !== 100) {
+      let newAllBots = this.state.preFilterBots.filter(setBot => setBot.bot_class === filter)
+      this.setState({
+        ...this.state,
+        allBots: [...newAllBots, ...this.state.allBots],
+        botFilter: `${this.state.botFilter}, ${filter}`
+      })
+    } else {
+      let newAllBots = this.state.preFilterBots.filter(setBot => setBot.bot_class === filter)
+      this.setState({
+        ...this.state,
+        allBots: newAllBots,
+        botFilter: filter
+      })
+    }
   }
 
   render() {
     return <div>
-      <YourBotArmy myBots={this.state.myBots} removeBotFromArmy={this.removeBotFromMyBots} deleteBot={this.removeBotFromAllBots}/>
-      <SortBar sortBy={this.sortBy} botFilter={this.state.botFilter} changeFilter={this.changeBotFilter} secondFilter={this.secondaryBotFilter}/>
+      <YourBotArmy myBots={this.state.myBots} removeBotFromArmy={this.removeBotFromMyBots} deleteBot={this.deleteBot}/>
+      <SortBar sortBy={this.sortBy} botFilter={this.state.botFilter} changeFilter={this.changeBotFilter}/>
       <BotCollection bots={this.state.allBots} addBotToArmy={this.addBotToMyBots} deleteBot={this.removeBotFromAllBots}/>
       {/* <BotSpecs bot={this.state.specBot}/> */}
     </div>;

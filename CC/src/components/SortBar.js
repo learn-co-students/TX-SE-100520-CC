@@ -16,7 +16,7 @@ const SortBar = props => {
                 <option value="Defender">Defender</option>
                 <option value="Captain">Captain</option>
             </select>
-            Filter by multpile Classes: <select value={props.botFilter} onChange={(event) => props.secondFilter(event.target.value)}>
+            {/* Filter by multpile Classes: <select value={props.botFilter} onChange={(event) => props.secondFilter(event.target.value)}>
                 <option value="">None</option>
                 <option value="Support">Support</option>
                 <option value="Medic">Medic</option>
@@ -24,7 +24,7 @@ const SortBar = props => {
                 <option value="Assault">Assault</option>
                 <option value="Defender">Defender</option>
                 <option value="Captain">Captain</option>
-            </select>
+            </select> */}
         </div>
     )
 }
