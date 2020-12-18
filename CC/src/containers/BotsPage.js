@@ -28,19 +28,19 @@ class BotsPage extends Component {
     })
   }
 
-  frontEndDischarge = (botId) => {
-    let newBotCollection = this.state.allBots.filter(bot => bot.id != botId)
-    this.setState({allBots:newBotCollection})
-  }
+  // frontEndDischarge = (botId) => {
+  //   let newBotCollection = this.state.allBots.filter(bot => bot.id != botId)
+  //   this.setState({allBots:newBotCollection})
+  // }
 
-  backEndDischarge = (botId) => {
-    let deleteOption = {
-      method: "DELETE"
-    }
+  // backEndDischarge = (botId) => {
+  //   let deleteOption = {
+  //     method: "DELETE"
+  //   }
 
-    fetch(botsUrl+botId, deleteOption)
-    .then(this.frontEndDischarge(botId))
-  }
+  //   fetch(botsUrl+botId, deleteOption)
+  //   .then(this.frontEndDischarge(botId))
+  // }
   
 
   render() {

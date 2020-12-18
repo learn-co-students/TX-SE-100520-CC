@@ -12,7 +12,9 @@ class YourBotArmy extends Component {
           <div className="row bot-army-row">
             Your Bot Army
             {this.props.bots.map(bot => {
-          return <BotCard bot={bot} key={bot.name} manageBot={this.props.releaseBot} backEndDischarge={this.props.backEndDischarge} />
+          return <BotCard bot={bot} key={bot.name} manageBot={this.props.releaseBot} 
+          // backEndDischarge={this.props.backEndDischarge} 
+          />
           })}
           </div>
         </div>

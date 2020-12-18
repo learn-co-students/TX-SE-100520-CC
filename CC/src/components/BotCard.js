@@ -48,7 +48,9 @@ const BotCard = ({bot, manageBot, backEndDischarge}) => {
             <div className="ui center aligned segment basic">
               <button
                 className="ui mini red button"
-                onClick={() => backEndDischarge(bot.id)
+                onClick={() => 
+                  manageBot(bot)
+                  // backEndDischarge(bot.id)
                 }
               >
                 x
