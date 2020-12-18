@@ -17,9 +17,6 @@ const BotCard = props => {
         key={props.bot.id}
         onClick={() => 
         props.selectBot(props.bot)}
-       
-        
-        
       >
         <div className="image">
           <img alt="oh no!" src={props.bot.avatar_url} />

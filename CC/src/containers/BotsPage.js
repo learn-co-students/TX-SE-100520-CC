@@ -16,19 +16,24 @@ class BotsPage extends Component {
     .then(bots => this.setState({bots}))
   }
 
-  selectBot = (bot) => {
-    if(this.state.selectedBots.includes(bot)) {
+  removeBot = (bot) => {
       let newSelectedBots = this.state.selectedBots.filter(b => b.id !== bot.id)
       this.setState({
         selectedBots: newSelectedBots
       })
     }
-    else{
-      this.setState({
-      selectedBots: [...this.state.selectedBots, bot]
-      })
-    }
+  
+  addBot = (bot) => {
+   
+      if(!this.state.selectedBots.includes(bot)) {
+        this.setState({
+          selectedBots: [...this.state.selectedBots, bot]
+          })
+        }
   }
+  
+   
+  
 
   deleteBot = (deletedBot) => {
     let newBots = this.state.bots.filter(bot => bot.id !== deletedBot.id)
@@ -49,16 +54,15 @@ class BotsPage extends Component {
     <div> 
 
         <YourBotArmy   selectedBots={this.state.selectedBots}
-                       clickBot={this.clickBot}
-                       selectBot={this.selectBot}
+                       
+                       selectBot={this.removeBot}
                        deleteBot={this.deleteBot}
                       />
       
         <BotCollection bots={this.state.bots}
-                         selectBot={this.selectBot}
+                         selectBot={this.addBot}
                          selectedBots={this.state.selectedBots}
                      
-                         botClickStatus={this.state.clicked}
                          deleteBot={this.deleteBot}
                          />
 

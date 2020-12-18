@@ -13,6 +13,18 @@
       "updated_at": "2018-10-02T19:55:10.800Z"
     },
     {
+      "id": 102,
+      "name": "RyM-66",
+      "health": 86,
+      "damage": 36,
+      "armor": 77,
+      "bot_class": "Medic",
+      "catchphrase": "0110011100000100011110100110011000011001",
+      "avatar_url": "https://robohash.org/quidemconsequaturaut.png?size=300x300&set=set1",
+      "created_at": "2018-10-02T19:55:10.827Z",
+      "updated_at": "2018-10-02T19:55:10.827Z"
+    },
+    {
       "id": 103,
       "name": "P-24",
       "health": 88,
@@ -23,6 +35,18 @@
       "avatar_url": "https://robohash.org/idetcumque.png?size=300x300&set=set1",
       "created_at": "2018-10-02T19:55:10.844Z",
       "updated_at": "2018-10-02T19:55:10.844Z"
+    },
+    {
+      "id": 104,
+      "name": "qq-69",
+      "health": 74,
+      "damage": 29,
+      "armor": 95,
+      "bot_class": "Defender",
+      "catchphrase": "00011101001001000000101100001100110",
+      "avatar_url": "https://robohash.org/corruptieaqueexcepturi.png?size=300x300&set=set1",
+      "created_at": "2018-10-02T19:55:10.856Z",
+      "updated_at": "2018-10-02T19:55:10.856Z"
     },
     {
       "id": 105,

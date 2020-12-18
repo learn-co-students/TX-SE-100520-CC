@@ -3,10 +3,8 @@ import BotCard from '../components/BotCard'
 
 class YourBotArmy extends Component {
 
-         // {props.botClickStatus ? null 
-          // :
-          // }
 
+  
 
   render() {
     return (
@@ -17,12 +15,11 @@ class YourBotArmy extends Component {
           this.props.selectedBots.map(bot => 
                                   <BotCard bot={bot} 
                                   key={bot.id}
-                                  check={this.props.selectedBots.includes(bot)}
                                   selectBot={this.props.selectBot}
-                                 
                                   deleteBot={this.props.deleteBot}
+                     
                                   />)}
-            Your Bot Army
+       
           </div>
         </div>
       </div>
